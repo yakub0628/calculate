@@ -1,0 +1,146 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  transition: background 0.5s;
+}
+
+.theme-switcher {
+  margin-bottom: 20px;
+}
+
+.theme-switcher button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.calculator {
+  width: 340px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: background 0.5s, box-shadow 0.5s;
+}
+
+.screen {
+  background: #34495e;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: right;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  transition: background 0.3s;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.btn {
+  background: #34495e;
+  color: #ecf0f1;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background: #3b5998;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn.zero {
+  grid-column: span 2;
+}
+
+.equals {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.equals:hover {
+  background: #c0392b;
+}
+
+.currency-converter {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.currency-converter select,
+.currency-converter .convert {
+  flex: 1;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Themes */
+body.light {
+  background: #f1f1f1;
+}
+
+body.light .calculator {
+  background: #fff;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+body.dark {
+  background: #2c3e50;
+}
+
+body.dark .calculator {
+  background: #34495e;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+body.urban {
+  background: #3b3b3b
+    url('https://www.toptal.com/designers/subtlepatterns/patterns/brushed_alu.png') repeat;
+}
+
+body.urban .calculator {
+  background: #444;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.7);
+}
+
+body.sky {
+  background: linear-gradient(135deg, #87cefa, #b0e0e6);
+}
+
+body.sky .calculator {
+  background: #b0e0e6;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+body.beach {
+  background: linear-gradient(135deg, #ffdb58, #ffa07a);
+}
+
+body.beach .calculator {
+  background: #ffa07a;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
